@@ -10,15 +10,13 @@ import "./style.css";
 import NavMenu from "./NavMenu";
 import { Burger } from "./Burger";
 
-const SideBar = ({ active }) => {
+const SideBar = () => {
   const [isActive, setActive] = useState(false);
   const handleClick = (e) => {
     e.preventDefault();
     setActive(!isActive);
-    console.log(isActive);
   };
 
-  // const activeClass = active ? "activeLink" : "link";
   return (
     <div>
       <Burger onClick={handleClick} />
@@ -31,6 +29,9 @@ const SideBar = ({ active }) => {
         </NavLink>
         <NavLink activeStyle={activeLink} style={link} to="/createworkout">
           Create Workout
+        </NavLink>
+        <NavLink activeStyle={activeLink} style={link} to="/allworkouts">
+          Lazy Quering
         </NavLink>
       </NavMenu>
     </div>

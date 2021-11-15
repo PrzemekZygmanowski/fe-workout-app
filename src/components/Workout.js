@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 import { GET_WORKOUT_BY_ID } from "../graphql/GET_WORKOUT_BY_ID";
 import { useSelector } from "react-redux";
+import { Workout as WorkoutCommon } from "./commons/Workout";
 
 export const Workout = () => {
   const workout = useSelector((state) => state.currentWorkout);
@@ -10,20 +11,8 @@ export const Workout = () => {
       id: workout.id,
     },
   });
-  if (loading) {
-    console.log("it's loading");
-  }
-  if (error) {
-    console.log(error);
-  }
+  if (loading) return "it's loading";
+  if (error) return `there is some error! ${error.message}`;
 
-  return (
-    <>
-      <h1>{data && data.getWorkoutById.name}</h1>
-      <h2>{data && data.getWorkoutById.workoutType}</h2>
-      <h2>{data && data.getWorkoutById.timerType}</h2>
-      <p>{data && data.getWorkoutById.description}</p>
-      <p>{data && data.getWorkoutById.equipment}</p>
-    </>
-  );
+  return data && <WorkoutCommon data={data.getWorkoutById} />;
 };

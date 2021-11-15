@@ -7,7 +7,6 @@ export const WorkoutLi = ({ workout }) => {
   const dispatch = useDispatch();
 
   const navigateToWorkout = () => {
-    console.log(workout.id);
     dispatch(setCurrentWorkout(workout.id));
   };
 
