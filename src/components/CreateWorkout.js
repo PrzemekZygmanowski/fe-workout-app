@@ -16,7 +16,7 @@ export const CreateWorkout = () => {
   });
 
   const [createWorkout] = useMutation(CREATE_WORKOUT, {
-    onCompleted: () => navigate("/"),
+    onCompleted: () => navigate("/workouts"),
   });
 
   return (
@@ -24,7 +24,6 @@ export const CreateWorkout = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          console.log(formState);
           createWorkout({
             variables: {
               workout: {
