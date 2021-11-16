@@ -2,6 +2,7 @@ import React from "react";
 import { useLazyQuery } from "@apollo/client";
 import { GET_ALL_WORKOUTS } from "../graphql/GET_ALL_WORKOUTS";
 import { Workout as WorkoutCommon } from "./commons/Workout";
+import "../pages/style.css";
 
 export const AllWorkouts = () => {
   const [getWorkouts, { data, error, loading }] =
@@ -12,7 +13,6 @@ export const AllWorkouts = () => {
   return (
     <>
       <button onClick={getWorkouts}>Get All Workouts</button>
-
       {data &&
         data.getAllWorkouts.map((workout) => {
           return <WorkoutCommon key={workout.id} data={workout} />;

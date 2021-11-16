@@ -3,6 +3,7 @@ import { UPDATE_WORKOUT } from "../graphql/UPDATE_WORKOUT";
 import { useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import "./style.css";
 
 export const UpdateWorkout = () => {
   const navigate = useNavigate();

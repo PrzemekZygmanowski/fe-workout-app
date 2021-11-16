@@ -2,6 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setCurrentWorkout } from "../reducers/currentWorkoutAction";
+import { WorkoutLiStyle } from "./styles";
+import "./style.css";
 
 export const WorkoutLi = ({ workout }) => {
   const dispatch = useDispatch();
@@ -11,7 +13,12 @@ export const WorkoutLi = ({ workout }) => {
   };
 
   return (
-    <NavLink to={`/workouts/${workout.id}`} onClick={navigateToWorkout}>
+    <NavLink
+      class="workoutLi"
+      style={WorkoutLiStyle}
+      to={`/workouts/${workout.id}`}
+      onClick={navigateToWorkout}
+    >
       {workout.name}
     </NavLink>
   );

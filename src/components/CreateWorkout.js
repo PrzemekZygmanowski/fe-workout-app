@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { CREATE_WORKOUT } from "../graphql/CREATE_WORKOUT";
 import { useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
+import "./style.css";
 
 export const CreateWorkout = () => {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ export const CreateWorkout = () => {
   return (
     <div>
       <form
+        className="form"
         onSubmit={(e) => {
           e.preventDefault();
           createWorkout({

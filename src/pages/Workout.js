@@ -6,6 +6,7 @@ import { setCurrentWorkout } from "../reducers/currentWorkoutAction";
 import { useMutation } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import "./style.css";
 
 export const Workout = () => {
   const [isActive, setActive] = useState(false);
@@ -29,11 +30,11 @@ export const Workout = () => {
   };
 
   return (
-    <>
+    <div div className="page">
       <WorkoutComponent />
       <button onClick={deleteWorkoutFunction}>Delete Workout</button>
       <button onClick={handleClick}>Update Workout</button>
       {isActive && <UpdateWorkout />}
-    </>
+    </div>
   );
 };

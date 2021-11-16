@@ -1,0 +1,40 @@
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60vw;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px 1px rgba(255, 255, 255, 0.5);
+}
+
+.text {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.label {
+  margin: 10px;
+
+  font-size: 16px;
+}
+.name {
+  margin-bottom: 20px;
+
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.type {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.recipe {
+  margin-bottom: 20px;
+  font-size: 24px;
+}

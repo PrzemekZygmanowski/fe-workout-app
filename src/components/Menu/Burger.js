@@ -5,12 +5,12 @@ import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 const burgerStyle = {
   position: "fixed",
   right: "5%",
-  color: "#e58e26",
+  color: "#fff",
   border: "none",
   backgroundColor: "transparent",
   outline: "none",
   cursor: "pointer",
-  fontSize: 24,
+  fontSize: 32,
 };
 
 export const Burger = ({ onClick }) => {
