@@ -16,17 +16,4 @@ const WorkoutLiStyle = {
   margin: "20px auto",
 };
 
-const UsersStyle = {
-  color: "#fff",
-  backgroundColor: "#8395a7",
-  width: "50%",
-  border: "3px solid #e58e26",
-  borderRadius: 10,
-  boxShadow: "2px 2px 5px rgba(0,0,0,0.5)",
-  fontFamily: "arial",
-  listStyle: "none",
-  textAlign: "center",
-  margin: "20px auto",
-};
-
-export { WorkoutLiStyle, UsersStyle, HomeStyle };
+export { WorkoutLiStyle, HomeStyle };

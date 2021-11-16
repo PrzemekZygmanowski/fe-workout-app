@@ -21,16 +21,16 @@ const SideBar = () => {
     <div>
       <Burger onClick={handleClick} />
       <NavMenu styles={isActive ? menuActiveStyles : menuDisactiveStyles}>
-        <NavLink activeStyle={activeLink} style={link} to="/">
+        <NavLink activestyle={activeLink} style={link} to="/">
           Home
         </NavLink>
-        <NavLink activeStyle={activeLink} style={link} to="/workouts">
+        <NavLink activestyle={activeLink} style={link} to="/workouts">
           Workouts
         </NavLink>
-        <NavLink activeStyle={activeLink} style={link} to="/createworkout">
+        <NavLink activestyle={activeLink} style={link} to="/createworkout">
           Create Workout
         </NavLink>
-        <NavLink activeStyle={activeLink} style={link} to="/allworkouts">
+        <NavLink activestyle={activeLink} style={link} to="/allworkouts">
           Lazy Quering
         </NavLink>
       </NavMenu>

@@ -14,7 +14,7 @@ export const WorkoutLi = ({ workout }) => {
 
   return (
     <NavLink
-      class="workoutLi"
+      className="workoutLi"
       style={WorkoutLiStyle}
       to={`/workouts/${workout.id}`}
       onClick={navigateToWorkout}

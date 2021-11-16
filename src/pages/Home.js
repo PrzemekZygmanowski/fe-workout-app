@@ -5,7 +5,7 @@ import { HomeStyle } from "./styles";
 export const Home = () => {
   return (
     <>
-      <h1 style={HomeStyle}>GraphQl Frontend example</h1>
+      <h1 style={HomeStyle}>GraphQl Frontend Example</h1>
     </>
   );
 };

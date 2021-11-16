@@ -6,12 +6,8 @@ import "./style.css";
 
 export const WorkoutsList = () => {
   const { data, error, loading } = useQuery(GET_WORKOUTS_TITLES);
-  if (loading) {
-    console.log("it's loading");
-  }
-  if (error) {
-    console.log(error);
-  }
+  if (loading) return "it's loading";
+  if (error) return `there is some error! ${error.message}`;
 
   return (
     <div className="list">
